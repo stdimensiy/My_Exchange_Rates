@@ -1,4 +1,5 @@
 package ru.vdv.myexchangerates.domain.valutes
 
-interface Currency {
+open class Currency {
+    var charCode: String? = null
 }
