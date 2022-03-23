@@ -1,21 +1,16 @@
 package ru.vdv.myexchangerates.domain
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import java.sql.Timestamp
-import java.util.*
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
 data class ExchangeRates(
     @SerializedName("Date")
-    val date: Date,
+    val date: String? = null,
     @SerializedName("PreviousDate")
-    val previousDate: Date,
+    val previousDate: String? = null,
     @SerializedName("PreviousURL")
-    val previousURL: String,
+    val previousURL: String? = null,
     @SerializedName("Timestamp")
-    val timestamp: Timestamp,
+    val timestamp: String? = null,
     @SerializedName("Valute")
-    val valute: List<Valute>
-) : Parcelable
+    val valute: Valute? = Valute()
+)
