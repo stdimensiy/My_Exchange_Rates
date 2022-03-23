@@ -10,4 +10,4 @@ data class UZS(
     @SerializedName("Name") var name: String? = null,
     @SerializedName("Value") var value: Double? = null,
     @SerializedName("Previous") var previous: Double? = null
-)
+) : Currency

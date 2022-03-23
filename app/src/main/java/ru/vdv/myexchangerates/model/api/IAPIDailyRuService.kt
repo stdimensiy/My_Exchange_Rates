@@ -6,5 +6,6 @@ import ru.vdv.myexchangerates.domain.ExchangeRates
 
 interface IAPIDailyRuService {
     @GET("daily_json.js")
-    fun GetListExchangeRates(): Call<ExchangeRates>
+    fun getListExchangeRates(): Call<ExchangeRates>
+
 }
