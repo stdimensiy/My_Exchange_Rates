@@ -1,6 +1,7 @@
 package ru.vdv.myexchangerates.domain
 
 import com.google.gson.annotations.SerializedName
+import ru.vdv.myexchangerates.domain.valutes.*
 
 data class Valute(
     @SerializedName("AUD") var AUD: AUD? = AUD(),
