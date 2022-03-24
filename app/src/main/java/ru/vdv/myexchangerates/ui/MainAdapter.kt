@@ -17,6 +17,10 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
         Log.d("Моя проверка", "Всего элементов: ${items.size}")
         Log.d("Моя проверка", "Получен элемент numCode: ${item.charCode}")
         holder.title.text = item.charCode
+        holder.description.text = item.name
+        holder.currentRate.text = item.value.toString()
+        holder.previousRate.text = item.previous.toString()
+        holder.duff.text = (item.previous!! - item.value!!).toString()
     }
 
     override fun getItemCount(): Int {

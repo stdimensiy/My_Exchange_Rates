@@ -14,5 +14,12 @@ class MainViewHolder(
         false
     )
 ) : RecyclerView.ViewHolder(binding.root) {
-    var title = binding.title
+    val title = binding.title
+    val currentRate = binding.currentRate
+    val previousRate = binding.previousRate
+    val duff = binding.duff
+    val flag = binding.flag
+    val status = binding.status
+    val nominal = binding.nominal
+    val description = binding.description
 }
