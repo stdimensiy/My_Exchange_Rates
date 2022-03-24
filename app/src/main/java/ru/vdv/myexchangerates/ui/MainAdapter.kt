@@ -16,11 +16,15 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
         val item = items[position]
         Log.d("Моя проверка", "Всего элементов: ${items.size}")
         Log.d("Моя проверка", "Получен элемент numCode: ${item.charCode}")
-        holder.title.text = item.charCode
+        item.charCode?.let {
+            holder.setFlagForCharCode(it)
+            holder.title.text = it
+        }
+        holder.nominal.text = item.nominal.toString()
         holder.description.text = item.name
         holder.currentRate.text = item.value.toString()
         holder.previousRate.text = item.previous.toString()
-        holder.duff.text = (item.previous!! - item.value!!).toString()
+        holder.duff.text = String.format("%.4f", (item.previous!! - item.value!!))
     }
 
     override fun getItemCount(): Int {

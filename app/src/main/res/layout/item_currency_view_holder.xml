@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="50dp"
+    android:layout_margin="4dp">
 
     <ImageView
         android:id="@+id/flag"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
+        android:src="@drawable/flag_rub_for_russia_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,10 +19,13 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="123"
+        android:layout_marginStart="8dp"
+        tools:text="RUB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/flag"
         app:layout_constraintTop_toTopOf="@+id/flag" />
 
@@ -28,25 +33,28 @@
         android:id="@+id/nominal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="10"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/flag"
-        app:layout_constraintStart_toEndOf="@+id/flag" />
+        app:layout_constraintStart_toStartOf="@+id/title"
+        tools:text="10" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Описание"
+        android:layout_marginStart="4dp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/flag"
-        app:layout_constraintStart_toEndOf="@+id/nominal" />
+        app:layout_constraintStart_toEndOf="@+id/nominal"
+        tools:text="Африканских тугриков" />
 
     <ImageView
         android:id="@+id/status"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/current_rate"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/ic_change_in_the_big_way"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/flag" />
 
     <TextView
@@ -54,6 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00.0000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/status"
         app:layout_constraintStart_toStartOf="@+id/status"
         app:layout_constraintTop_toBottomOf="@+id/status" />
@@ -64,6 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:text="00.0000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,6 +84,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00.0000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/current_rate"
         app:layout_constraintStart_toStartOf="@+id/current_rate" />
