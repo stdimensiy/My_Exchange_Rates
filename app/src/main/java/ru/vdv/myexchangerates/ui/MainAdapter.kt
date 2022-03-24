@@ -4,7 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ru.vdv.myexchangerates.domain.valutes.Currency
+import ru.vdv.myexchangerates.domain.Currency
 
 class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
     var items: List<Currency> = listOf()
