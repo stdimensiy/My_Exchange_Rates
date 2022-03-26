@@ -1,6 +1,5 @@
 package ru.vdv.myexchangerates.ui
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -14,14 +13,12 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val item = items[position]
-        Log.d("Моя проверка", "Всего элементов: ${items.size}")
-        Log.d("Моя проверка", "Получен элемент numCode: ${item.charCode}")
         item.charCode?.let {
             holder.setFlagForCharCode(it)
             holder.title.text = it
         }
-        holder.nominal.text = item.nominal.toString()
-        holder.description.text = item.name
+        holder.setCurrencyDescription(item.nominal, item.name)
+        holder.setCourseChange(item.value, item.previous)
         holder.currentRate.text = item.value.toString()
         holder.previousRate.text = item.previous.toString()
         holder.duff.text = String.format("%.4f", (item.previous!! - item.value!!))
