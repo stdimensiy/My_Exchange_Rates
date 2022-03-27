@@ -3,11 +3,7 @@ package ru.vdv.myexchangerates.model.repository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import ru.vdv.myexchangerates.domain.CallBack
-import ru.vdv.myexchangerates.domain.ExchangeRates
-import ru.vdv.myexchangerates.domain.PresentExchangeRates
-import ru.vdv.myexchangerates.domain.Valute
-import ru.vdv.myexchangerates.domain.valutes.Currency
+import ru.vdv.myexchangerates.domain.*
 import ru.vdv.myexchangerates.model.api.IAPIDailyRuService
 import ru.vdv.myexchangerates.model.retrofit.Common
 import kotlin.reflect.full.memberProperties
