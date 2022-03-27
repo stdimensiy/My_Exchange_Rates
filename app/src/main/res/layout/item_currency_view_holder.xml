@@ -59,7 +59,7 @@
             android:layout_height="24dp"
             android:layout_marginVertical="4dp"
             android:layout_marginEnd="100dp"
-            android:src="@drawable/ic_change_in_the_big_way"
+            android:src="@drawable/ic_there_are_no_changes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/current_rate" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/duff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00.0000"
+            android:text="--.----"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@+id/previous_rate"
